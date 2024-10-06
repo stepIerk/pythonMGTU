@@ -49,9 +49,11 @@ def analyzer(h, m):
                 minutes_text = 'минут'
         return(out_h, hours_text, out_m, minutes_text, time_text, special_text)
         
-
-input_h, input_m = input('Enter time >>> ').split()
-hours = int(input_h)
-minutes = int(input_m)
-ans = ' '.join(filter(None, [str(s) for s in analyzer(hours, minutes)]))
-print(input_h, input_m, '-', ans)
+try:
+    input_h, input_m = input('Enter time >>> ').split()
+    hours = int(input_h)
+    minutes = int(input_m)
+    ans = ' '.join(filter(None, [str(s) for s in analyzer(hours, minutes)]))
+    print(input_h, input_m, '-', ans)
+except:
+    print('invalid data')
