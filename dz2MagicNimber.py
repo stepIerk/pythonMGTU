@@ -1,5 +1,4 @@
 import random
-import os
 from numpy import sign
 
 
@@ -46,7 +45,6 @@ class Game:
 
     def siri_speech(self, speech) -> None:
         print(speech)
-        os.system(f'say "{speech}"')
 
 
 class MagicNumber:
